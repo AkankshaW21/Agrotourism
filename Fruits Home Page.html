@@ -1,0 +1,666 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Fruits</title>
+</head>
+<body>
+    <style>
+
+   
+
+.imgslider {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; /* Allows positioning of child elements */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: changeImage 12s linear infinite;
+}
+
+.slider-content {
+    position: absolute;
+    top: 40%; /* Center the content vertically */
+    left: 48%; /* Center the content horizontally */
+    transform: translate(-50%, -50%); /* Center the content precisely */
+    text-align: center;
+    color: #1e1111; /* Text color */
+    padding: 20px; /* Add padding for better readability */
+}
+
+.slider-content h1 {
+    font-size: 50px; /* Adjust heading font size */
+    margin-bottom: 10px; /* Space between heading and paragraph */
+}
+
+.slider-content p {
+    font-size: 21px; /* Adjust paragraph font size */
+  
+}
+
+        
+        
+@keyframes changeImage {
+            0% {
+                background-image: url("360_F_608246866_ERp1c5LCFIWEAcvzvtbIDVs0kGMiYN9E.jpg");
+            }
+            50% {
+                background-image: url("360_F_608246866_ERp1c5LCFIWEAcvzvtbIDVs0kGMiYN9E.jpg");
+            }
+            50% {             
+                background-image: url("orange-tree-oranges-field-600nw-2412545799.webp");
+
+            }
+            75% {
+                background-image: url("avocado-on-tree.jpg.webp");
+            }
+            100% {
+                background-image: url("avocado-on-tree.jpg.webp");
+
+            }
+        }
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(1, 1, 22);
+            color: #dfd3d3;
+
+            margin-left: 0px;
+        }
+
+        #logo {
+            text-decoration: none;
+            font-size: 24px;
+            color: #dfd3d3;
+        }
+
+        #navbar a {
+    text-decoration: none;
+    color: #dfd3d3;
+    margin: 0 10px;
+    font-size: 19.4px;
+    font-weight: lighter;
+}
+
+        .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Hide the dropdown content by default */
+    position: absolute;
+    background-color: #100101;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content when hovering over the main dropdown */
+}
+
+.dropdown-content .dropdown:hover .submenu {
+    display: block; /* Show the submenu when hovering over its parent item */
+}
+
+.submenu {
+    display: none; /* Initially hide the submenu */
+    position: absolute;
+    left: 100%; /* Position to the right of the parent */
+    top: 0; /* Align with the top of the parent */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #070101;
+}
+/* Optional: Styles for the submenu links */
+.submenu {
+    background-color: #080101; /* Background color for the submenu */
+    border: 1px solid #0a0101; /* Optional: Border for better visibility */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.submenu a {
+    padding: 10px 12px; /* Padding for submenu links */
+    min-width: 160px; /* Set min-width for submenu */
+    color: #333; /* Text color for submenu links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.submenu a:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.horizontal-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 130px;
+            margin-right: 80px;
+            height: 450px;
+            width: 1200px; /* Adjust the width to cover the page minus margins */
+            margin-bottom: 20px; /* Add margin to create space between this container and other content */
+        }
+
+        /* Style for individual containers */
+        .container-item {
+            flex: 0 0 calc(33.3333% - 40px); /* Set the width for each container with margin */
+            background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            /* Add margin to create space between containers */
+            
+            /* Add margin to create space between containers */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Style for the image in the container */
+        .container-image {
+           height: 85%; /* 75% of the container's height for the image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
+        }
+
+
+        .container-heading a {
+            text-decoration: none; /* Remove the default underline */
+            color: #333; /* Set the text color to your preference */
+            cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+        }
+
+.additional-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-left: 50px;
+            margin-right: 50px; /* Adjust margin-right for desired spacing */
+            height: 330px;
+            margin-left: 70px;
+            width: 1300px;
+            margin-bottom: 20px; /* Add margin to create space between this container and other content */
+        }
+
+        /* Style for individual additional containers */
+        .additional-item {
+            flex: 0 0 calc(25% - 40px); /* Set the width for each container with margin */
+            background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to create space between containers */
+            padding: 0px;
+        }
+
+        /* Style for the image in the additional container */
+        .additional-image {
+            height: 230px; /* 75% of the container's height for the image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
+        }
+
+        /* Style for the content within the additional container */
+        .additional-content {
+            margin-top: 5px; /* Add space between the image and content */
+        }
+        h3 {
+      margin-left: 160px;
+      font-size: 22px;
+      margin-right: 90px;
+      font-style: normal;
+    }
+    h4 {
+        font-size: 22px;
+    }
+
+    .footer {
+    margin-top:15px;
+    
+
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 0.85rem;
+}
+ .foot-panel2  {
+    background-color: #222f3d;
+    color: white;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+ } 
+ ul {
+     margin-top: 20px ;
+ }
+ 
+  ul a {
+     display:block;
+     font-size: 3 rem;
+     margin-top: 10px;
+     margin-left: 13px;
+     color:#dddddd:
+  }
+ 
+  .foot-panel3 {
+         background-color: #222f3d;
+         color: white;
+         border-top:0.5px solid white;
+         height:70px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+  }
+
+  .separate-container {
+            background-color: #607389;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .separate-container h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Style for social media icons within separate container */
+        .social-icons-container {
+            font-size: 34px;
+        }
+/* Style for the navigation links */
+
+
+.social-icons-container .social-icon-link {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-right: 10px; /* Add margin between the icons */
+  text-decoration: none; /* Remove underlines from the links */
+  color: #3b5998; /* Facebook blue color */
+}
+
+.social-icons-container .social-icon-link.facebook:hover {
+  color: #4267B2; /* Facebook hover color */
+}
+
+.social-icons-container .social-icon-link.twitter {
+  color: #1DA1F2; /* Twitter blue color */
+}
+
+.social-icons-container .social-icon-link.twitter:hover {
+  color: #2795D9; /* Twitter hover color */
+}
+
+.social-icons-container .social-icon-link.instagram {
+  color: #E4405F; /* Instagram pink/red color */
+}
+
+.social-icons-container .social-icon-link.instagram:hover {
+  color: #C13584; /* Instagram hover color */
+}
+
+.social-icons-container .social-icon-link.linkedin {
+  color: #0A66C2; /* LinkedIn blue color */
+}
+
+.social-icons-container .social-icon-link.linkedin:hover {
+  color: #0073B2; /* LinkedIn hover color */
+}
+
+.social-icons-container .social-icon-link.youtube {
+  color: #FF0000; /* YouTube red color */
+}
+
+.social-icons-container .social-icon-link.youtube:hover {
+  color: #FF3333; /* YouTube hover color */
+}
+h6 {
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+ ul h5 {
+    font-size: 22px;
+    margin-left: 1px;
+}
+#navbar a {
+    text-decoration: none;
+    color: #dfd3d3;
+    margin: 0 10px;
+    font-size: 18px;
+    display: flex; /* Add display: flex; to arrange text and icon vertically */
+    flex-direction: column; /* Arrange text and icon in a column layout */
+    align-items: center; /* Center content horizontally */
+}
+    </style>
+</body>
+<body>
+    <div id="navbar">
+        <a href="Agrotourism home page.html">Home</a>
+        <div class="dropdown">
+            <a href="">Transportation</a>
+            <div class="dropdown-content">
+              <a href="Agrotourism Bus Home Page.html">Bus</a>
+              <br>
+              <a href="Agrotourism Train Home Page.html">Train</a>
+              <br>
+              <a href="Agrotourism Flight Home Page.html">Flight</a>
+
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="">Accomodation</a>
+            <div class="dropdown-content">
+              <a href="Agrotourism Hotels Home Page.html">Hotels</a>
+              <br>
+              <a href="Agrotourism Resorts Home Page.html">Resorts</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#">Reviews</a>
+            <div class="dropdown-content">
+                <div class="dropdown">
+                    <a href="#">Transportation</a>
+                    <div class="submenu">
+                        <a href="Bus Reviews Display.php">Bus</a>
+                        <a href="Train Reviews Display.php">Train</a>
+                        <a href="Flight Reviews Display.php">Flight</a>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <a href="#">Accommodation</a>
+                    <div class="submenu">
+                        <a href="Hotels Reviews Display.php">Hotels</a>
+                        <a href="Resorts Reviews Display.php">Resorts</a>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <a href="#">Farms</a>
+                    <div class="submenu">
+                        <a href="Fruit Farm Reviews Display.php">Fruit Farms</a>
+                        <a href="Flower Farm Reviews Display.php">Flower Farms</a>
+                        <a href="Vegetables Farm Reviews Display.php">Vegetable Farms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <a href="Agrotourism Blogs.html">Blogs</a>
+         <a href="Agrotourism Features.html">Features</a>
+        <a href="Agrotourism About Us.html">About Us</a>
+        <a href="Agrotourism Contact Us .html">Contact Us</a>
+        <a href="Agrotourism FAQ.html">FAQ</a>
+        <a href="logout.php">
+            <img src="https://cdn-icons-png.flaticon.com/128/10313/10313098.png" alt="Logout" width="17" height="16">
+             Logout
+        </a>
+    </div>
+    
+    
+    <div class="imgslider" style="background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/top-view-of-beautiful-white-sand-beach--aerial-drone-shot-mohamed-abdulraheem.jpg');">
+       
+        <div class="imgslider" style="background-image: url('https://news.cgtn.com/news/3d3d774e314d444e34457a6333566d54/img/aa2cabebf2924e9f912ebb8eb1df796d/aa2cabebf2924e9f912ebb8eb1df796d.jpg');">
+            <div class="slider-content">
+                <h1>A Journey Through Rich Fruit Farm Heritage</h1>
+        </div>
+    
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h3>Explore the Land of Abundant Orchards and Lush Landscapes
+    Venture into a world of fruitful wonders, where sprawling orchards and vibrant fruit farms await. 
+    Journey through these bountiful landscapes and discover the stories behind each harvest, from juicy 
+    berries to sun-ripened citrus. Every visit offers a taste of tradition, sustainability, and the art of fruit farming at its finest.
+</h3>
+<br>
+<br>
+<br>
+
+
+    <!-- Additional Containers -->
+    <div class="additional-container">
+        <!-- Additional Container 1 -->
+        <div class="additional-item">
+            <div class="additional-image" style="background-image: url('https://farmernear.me/uploads/avatar/65a8dff529bcb-170556619717055661972468-avatar.jpg');"></div>
+            <div class="additional-content">
+                <h4 class="container-heading"><a href="Custardapple Farm Home Page.html">Custardapple Farms</a></h4>
+
+                         
+            </div>
+        </div>
+        <!-- Additional Container 2 -->
+        <div class="additional-item">
+            <div class="additional-image" style="background-image: url('fruit-strawberry-field_87720-98654.jpg');"></div>
+            <div class="additional-content">
+                <h4 class="container-heading"><a href="Berry Farm Home Page.html">Berry Farms</a></h4>
+
+                
+            </div>
+        </div>
+        <!-- Additional Container 3 -->
+        <div class="additional-item">
+            <div class="additional-image" style="background-image: url('images (1).jpeg');"></div>
+            <div class="additional-content">
+                <h4 class="container-heading"><a href="Mango farm Home Page.html">Mango Farms</a></h4>
+
+                
+            </div>
+        </div>
+        <!-- Additional Container 4 -->
+        <div class="additional-item">
+            <div class="additional-image" style="background-image: url('nature-beautiful-grapes-high-definition-full-screen-wallpaper-image-download-1200x900.jpg');"></div>
+            <div class="additional-content">
+                <h4 class="container-heading"><a href="Grapes farm Home Page.html">Grape Farms</a></h4>
+               
+            </div>
+        </div>
+    </div>
+<!-- Additional Containers -->
+<div class="additional-container">
+    <!-- Additional Container 1 -->
+    <div class="additional-item">
+        <div class="additional-image" style="background-image: url('sunkissed-pineapple-lush-field-tropical-fruit-fresh-produce-concept-natures-beauty-captured-vibrant-colors-ideal-healthy-lifestyle-themes-ai_372197-33966.jpg');"></div>
+        <div class="additional-content">
+            <h4 class="container-heading"><a href="None.html">Pineapple Farms</a></h4>
+        </div>
+    </div>
+    <!-- Additional Container 2 -->
+    <div class="additional-item">
+        <div class="additional-image" style="background-image: url('avocado-on-tree.jpg.webp');"></div>
+        <div class="additional-content">
+            <h4 class="container-heading"><a href="None.html">Avocado Farms</a></h4>
+        </div>
+    </div>
+    <!-- Additional Container 3 -->
+    <div class="additional-item">
+        <div class="additional-image" style="background-image: url('no-perennial-yes-coconut-fruit-plant-cp008-1-elite-green-original-imagdb7gc86vnvzf.webp');"></div>
+        <div class="additional-content">
+            <h4 class="container-heading"><a href="None.html">Coconut Farms</a></h4>
+        </div>
+    </div>
+    <!-- Additional Container 4 -->
+    <div class="additional-item">
+        <div class="additional-image" style="background-image: url('images (2).jpeg');"></div>
+        <div class="additional-content">
+            <h4 class="container-heading"><a href="None.html">Papaya Farms</a></h4>
+        </div>
+    </div>
+</div>
+       
+
+<br>
+
+<h3>These Fruit Farms Not Only Offer a Taste of Nature but Also Provide an Enriching Experience
+Step into the vibrant world of fruit farming, where each orchard and grove tells a story of tradition and flavor. Immerse yourself in the abundance of nature, and let the beauty of these bountiful landscapes captivate you as you explore a variety of delicious fruits right from the source.
+</h3>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <div class="foot-panel">
+
+    </div>
+    <div class="foot-panel2">
+        <ul>
+            <h5>Accommodations</h5>
+<a>
+Farm Stays<br>
+Eco Resorts<br>
+Rustic Hostels<br>
+Agri Rentals<br>
+Farm Campsites<br>
+Farm B&Bs<br>
+Local Flights<br>
+Rural Airlines<br>
+Nearby Airports<br>
+Flight Status<br>
+Baggage Info<br>
+Agro Flyer Programs
+</a>
+
+
+        </ul>
+        <ul>
+            <h5>Travel Guides</h5>
+            <a>
+                Agro Tips<br>
+                Packing Essentials<br>
+                Visa Info<br>
+                Travel Insurance<br>
+                Local Customs<br>
+                Cultural Insights<br>
+                Farm Tours<br>
+                Outdoor Activities<br>
+                Local Cuisine<br>
+                Market Guide<br>
+                Artisan Shopping<br>
+                Night Farm Visits
+            </a>
+        </ul>
+        <ul>
+            <h5>Travel Guides</h5>
+            <a>
+                Agro Tips<br>
+                Packing Essentials<br>
+                Visa Info<br>
+                Travel Insurance<br>
+                Local Customs<br>
+                Cultural Insights<br>
+                Farm Tours<br>
+                Outdoor Activities<br>
+                Local Cuisine<br>
+                Market Guide<br>
+                Artisan Shopping<br>
+                Night Farm Visits
+            </a>
+            
+        </ul>
+        <ul>
+            <h5>Social Media</h5>
+            <a>
+                Facebook<br>
+                Twitter<br>
+                Instagram<br>
+                Pinterest<br>
+                YouTube<br>
+                Blog Subscription<br>
+                Travel Alerts<br>
+                Health Tips<br>
+                Safety Guidelines<br>
+                Emergency Contacts<br>
+                Insurance Info
+            </a>
+            
+
+        </ul>
+    </div>
+
+
+</footer>
+
+<div class="separate-container">
+   
+
+    <!-- Phone number and address -->
+    <div class="contact-info">
+        <p><i class="fas fa-map-marker-alt"></i> Address: VIT Pune, IT Department, TY-C-Group No.11, Pune, India</p>
+    </div>
+    <!-- End of phone number and address -->
+</div>
+
+
+</body>
+
+</html>

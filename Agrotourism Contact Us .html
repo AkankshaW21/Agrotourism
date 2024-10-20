@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!-- Include Font Awesome CSS -->
+  <style>
+    /* Your existing styles here */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(1, 1, 22);
+            color: #dfd3d3;
+
+            margin-left: 0px;
+        }
+
+        #logo {
+            text-decoration: none;
+            font-size: 24px;
+            color: #dfd3d3;
+        }
+
+        #navbar a {
+    text-decoration: none;
+    color: #dfd3d3;
+    margin: 0 10px;
+    font-size: 19.4px;
+    font-weight: lighter;
+}
+
+        .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Hide the dropdown content by default */
+    position: absolute;
+    background-color: #100101;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content when hovering over the main dropdown */
+}
+
+.dropdown-content .dropdown:hover .submenu {
+    display: block; /* Show the submenu when hovering over its parent item */
+}
+
+.submenu {
+    display: none; /* Initially hide the submenu */
+    position: absolute;
+    left: 100%; /* Position to the right of the parent */
+    top: 0; /* Align with the top of the parent */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #070101;
+}
+/* Optional: Styles for the submenu links */
+.submenu {
+    background-color: #080101; /* Background color for the submenu */
+    border: 1px solid #0a0101; /* Optional: Border for better visibility */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.submenu a {
+    padding: 10px 12px; /* Padding for submenu links */
+    min-width: 160px; /* Set min-width for submenu */
+    color: #333; /* Text color for submenu links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.submenu a:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+ .container {
+            position: relative;
+            width: 100%;
+            height: 650px; /* Set the desired height for the blurred background */
+            overflow: hidden;
+        }
+
+        .blur-background {
+            background-image: url('.vscode/pexels-jéshoots-4831.jpg');
+            height: 1200px;
+            width: 1500px;
+            filter: blur(30px); /* Adjust the blur intensity as needed */
+            position: absolute;
+            z-index: -1;
+        }
+
+        /* Style the overlay image */
+        .overlay-image {
+            position: absolute;
+            margin-top: 293px;
+            left: 40%; /* Adjust the left position to your desired spacing */
+            transform: translate(-50%, -50%);
+            width: 1200px; /* Set the desired width for the overlay image */
+            height: 575px; /* Set the desired height for the overlay image */
+            margin-left: 150px;
+           
+        }
+        .overlay-text {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 54px; /* Set the desired font size */
+            color: white; /* Set the desired text color */
+            font-weight: bold;
+            padding: 10px 20px; /* Set padding as needed */
+        }
+    .content {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    h6 {
+      margin-left: 650px;
+      font-size: 35px;
+    }
+    h5 {
+      margin-left: 150px;
+      font-size: 18px;
+      margin-top: 0px;
+    }
+    .h1 {
+    
+      font-size: 36px;
+      margin-left: 700px;
+    }
+    
+    h3 {
+      margin: 10px 0;
+      font-size: 25px;
+    }
+    
+    .p {
+      margin: 5px 0;
+     font-size: 1px;
+    }
+    /* Your existing CSS styles here */
+/* Your existing CSS styles here */
+
+.overlay-text-below {
+    position: absolute;
+    top: 50%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px; /* Set the desired font size */
+    color: white; /* Set the desired text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color with opacity */
+    padding: 10px 20px; /* Set padding as needed */
+    width:600px; /* Set the desired width for the text */
+     /* Set a maximum width if necessary */
+    z-index: 1; /* Place the text above the overlay image */
+    line-height: 1.3; /* Set the line height to control the spacing between lines */
+}
+.bottom-containers {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      position: absolute;
+      bottom: -50px; /* Adjust the position to place the containers partially below the blurred background */
+      left: 50%; /* Adjust the horizontal position */
+      transform: translateX(-50%);
+      width: 80%; /* Adjust the width as needed */
+      max-width: 1200px; /* Set a maximum width if necessary */
+      z-index: 1; /* Place the containers above the overlay image */
+    }
+
+    /* Style for each individual new container */
+    .new-container {
+      text-align: center;
+      background-color:white;
+      padding: 10px;
+      flex: 1;
+      margin: 0 10px;
+      height: 250px; /* Increase the height as desired */
+      position: relative;
+      overflow: hidden; /* Hide the overflowing content */
+    }
+
+    .new-container h3 {
+      font-size: 25px;
+      margin-top: 13px;
+      color: rgb(1, 1, 1);
+    }
+
+    .new-container p {
+      font-size: 16px;
+      margin: 5px 0;
+      color: rgb(11, 9, 9);
+    }
+
+    /* Style for the content within the additional container */
+    .additional-content {
+      margin-top: 5px; /* Add space between the image and content */
+    }
+
+    /* Style for the location icon */
+    .location-icon {
+      font-size: 48px; /* Adjust the icon size as needed */
+      color:rgb(44, 104, 182); /* Icon color */
+       /* Spacing between icon and heading */
+      margin-top: 25px;
+    }
+
+.footer {
+    margin-top:55px;
+    
+
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+   margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 0.85rem;
+}
+ .foot-panel2  {
+    background-color: #222f3d;
+    color: white;
+    height: 350px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-evenly;
+ } 
+ ul {
+     margin-top: 20px ;
+ }
+ 
+  ul a {
+     display:block;
+     font-size: 3 rem;
+     margin-top: 10px;
+     color:#dddddd:
+  }
+ 
+  .foot-panel3 {
+         background-color: #222f3d;
+         color: white;
+         border-top:0.5px solid white;
+         height:70px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+  }
+
+  
+  .separate-container {
+            background-color: #607389;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .separate-container h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Style for social media icons within separate container */
+        /* Style for the social media icons within separate container */
+/* Style for the social media icons within separate container */
+/* Style for the social media icons within separate container */
+.social-icons-container .social-icon-link {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-right: 10px; /* Add margin between the icons */
+    text-decoration: none; /* Remove underlines from the links */
+    color: #3b5998; /* Facebook blue color */
+}
+
+.social-icons-container .social-icon-link.facebook:hover {
+    color: #4267B2; /* Facebook hover color */
+}
+
+.social-icons-container .social-icon-link.twitter {
+    color: #1DA1F2; /* Twitter blue color */
+}
+
+.social-icons-container .social-icon-link.twitter:hover {
+    color: #2795D9; /* Twitter hover color */
+}
+
+.social-icons-container .social-icon-link.instagram {
+    color: #E4405F; /* Instagram pink/red color */
+}
+
+.social-icons-container .social-icon-link.instagram:hover {
+    color: #C13584; /* Instagram hover color */
+}
+
+.social-icons-container .social-icon-link.linkedin {
+    color: #0A66C2; /* LinkedIn blue color */
+}
+
+.social-icons-container .social-icon-link.linkedin:hover {
+    color: #0073B2; /* LinkedIn hover color */
+}
+
+.social-icons-container .social-icon-link.youtube {
+    color: #FF0000; /* YouTube red color */
+}
+
+.social-icons-container .social-icon-link.youtube:hover {
+    color: #FF3333; /* YouTube hover color */
+}
+
+/* Style for the navigation links */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px; /* Adjust the spacing between links */
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(8, 4, 4);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-list a:hover {
+    text-decoration: underline; /* Add an underline on hover */
+}
+.new-container:nth-child(2) .email-icon {
+  color: #FF5733; /* Change the color of the email icon */
+  font-size: 46px; /* Adjust the size of the email icon */
+  margin-top: 25px; /* Spacing between icon and heading */
+}
+
+/* Style for the heading in Additional Container 2 */
+.new-container:nth-child(2) h3 {
+  color: #000000; /* Change the color of the heading */
+  font-size: 25px; /* Adjust the size of the heading */
+  margin: 10px 0; /* Adjust the margin around the heading */
+}
+.new-container:nth-child(2) p {
+ font-size: 17px;
+}
+/* Style for the phone call icon */
+.phone-icon {
+    font-size: 40px; /* Adjust the icon size as needed */
+    color:black; /* Icon color */
+    margin-top: 25px; /* Spacing between icon and heading */
+}
+/* Style for the author icon */
+.author-icon {
+  font-size: 48px; /* Adjust the icon size as needed */
+  color: rgb(33, 87, 181); /* Icon color */
+  margin-top: 10px; /* Spacing between icon and content */
+}
+
+
+.footer {
+    margin-top:15px;
+    
+
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 0.85rem;
+}
+ .foot-panel2  {
+    background-color: #222f3d;
+    color: white;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+ } 
+ ul {
+     margin-top: 20px ;
+ }
+ 
+ 
+ ul a {
+     display:block;
+     font-size:18px;
+     margin-top: 10px;
+     color:#dddddd:
+  }
+ 
+  .foot-panel3 {
+         background-color: #222f3d;
+         color: white;
+         border-top:0.5px solid white;
+         height:70px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+  }
+
+  .separate-container {
+            background-color: #607389;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .separate-container h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Your other existing styles */
+
+        /* Style for the additional containers */
+        .additional-containers {
+            display: flex;
+            justify-content: space-between; /* Adjust spacing as needed */
+            width: 900px; /* Adjust the maximum width as needed */
+            margin: 0 auto; /* Center the containers horizontally */
+            flex-wrap: wrap; /* Allow containers to wrap to the next row if needed */
+        }
+
+        /* Style for each additional container */
+        .additional-container {
+            flex: 1;
+            text-align: center;
+            max-width: 170px;
+            height: 180px; /* Adjust the maximum width as needed */
+            margin: 10px; /* Margin around each container */
+            padding: 20px; /* Add padding for spacing */
+            background-color: #fff; /* Background color of the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the container */
+        }
+
+        /* Style for the circular image container */
+        .circle-container {
+            width: 120px; /* Adjust the size of the circle container */
+            height: 120px;
+            border-radius: 50%; /* Create a circular shape */
+            overflow: hidden; /* Hide overflowing content */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        /* Style for the circular image */
+        .circle-container img {
+            width: 100%; /* Make the image fill the circular container */
+            height: auto;
+            border: 2px solid #fff; /* Add a border around the image */
+        }
+
+        /* Style for the heading within the container */
+        .additional-container h2 {
+            margin-top: 7px; /* Adjust spacing between image and heading */
+            font-size: 16px; /* Adjust the heading font size */
+        }
+
+        /* Style for the text within the container */
+        .additional-container p {
+            font-size: 16px; /* Adjust the text font size */
+            margin-top: 5px;
+        }
+       /* Style for the new additional containers */
+.new-additional-containers {
+  display: flex;
+            justify-content: center; /* Adjust spacing as needed */
+            
+            width: 900px; /* Adjust the maximum width as needed */
+            margin: 0 auto; /* Center the containers horizontally */
+            flex-wrap: wrap; /* Allow containers to wrap to the next row if needed */
+}
+
+/* Style for each new additional container */
+.new-additional-container {
+            
+    flex: 0 0 calc(50% - 90px); /* Adjust the width of each container */
+
+            text-align: center;
+            max-width: 170px;
+            height: 180px; /* Adjust the maximum width as needed */
+            margin: 10px; /* Margin around each container */
+            padding: 20px; /* Add padding for spacing */
+            background-color: #fff; /* Background color of the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the container */
+
+}
+.new-additional-container p {
+  font-size: 16px; /* Adjust the text font size */
+            margin-top: 5px;
+}
+.new-additional-container h2 {
+  margin-top: 7px; /* Adjust spacing between image and heading */
+            font-size: 16px; /* Adjust the heading font size */
+}
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <a href="Agrotourism home page.html">Home</a>
+    <div class="dropdown">
+        <a href="">Transportation</a>
+        <div class="dropdown-content">
+          <a href="Agrotourism Bus Home Page.html">Bus</a>
+          <br>
+          <a href="Agrotourism Train Home Page.html">Train</a>
+          <br>
+          <a href="Agrotourism Flight Home Page.html">Flight</a>
+
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="">Accomodation</a>
+        <div class="dropdown-content">
+          <a href="Agrotourism Hotels Home Page.html">Hotels</a>
+          <br>
+          <a href="Agrotourism Resorts Home Page.html">Resorts</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Reviews</a>
+        <div class="dropdown-content">
+            <div class="dropdown">
+                <a href="#">Transportation</a>
+                <div class="submenu">
+                    <a href="Bus Reviews Display.php">Bus</a>
+                    <a href="Train Reviews Display.php">Train</a>
+                    <a href="Flight Reviews Display.php">Flight</a>
+                </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                <a href="#">Accommodation</a>
+                <div class="submenu">
+                    <a href="Hotels Reviews Display.php">Hotels</a>
+                    <a href="Resorts Reviews Display.php">Resorts</a>
+                </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                <a href="#">Farms</a>
+                <div class="submenu">
+                    <a href="Fruit Farm Reviews Display.php">Fruit Farms</a>
+                    <a href="Flower Farm Reviews Display.php">Flower Farms</a>
+                    <a href="Vegetables Farm Reviews Display.php">Vegetable Farms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <a href="Agrotourism Blogs.html">Blogs</a>
+     <a href="Agrotourism Features.html">Features</a>
+    <a href="Agrotourism About Us.html">About Us</a>
+    <a href="Agrotourism Contact Us .html">Contact Us</a>
+    <a href="Agrotourism FAQ.html">FAQ</a>
+    <a href="logout.php">
+        <img src="https://cdn-icons-png.flaticon.com/128/10313/10313098.png" alt="Logout" width="17" height="16">
+         Logout
+    </a>
+</div>
+
+  <div class="container">
+    <div class="blur-background"></div>
+    <img src="https://images.unsplash.com/photo-1622840951255-d08db152f4ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3" alt="Overlay Image" class="overlay-image">
+    <div class="overlay-text">Contact Us</div> <!-- Added the overlay text here -->
+    <p class="overlay-text-below">Discover the beauty of agrotourism with us! Our website is your ultimate gateway to immersive farm experiences,
+       where you can explore picturesque 
+      landscapes, participate in hands-on farming activities, and savor the freshest local produce.</p>
+    <!-- Rest of your content goes here -->
+  </div>
+
+  <!-- Additional Containers at the bottom -->
+  <div class="bottom-containers">
+    <!-- Additional Container 1 -->
+    <div class="new-container">
+      <i class="fas fa-map-marker-alt location-icon"></i> <!-- Location icon -->
+      <h3>Our Address</h3>
+      <p> VIT Pune, IT Department, </p>
+      <p> Third Year,Group No.11, </p>
+        <p>Pune, India</p>
+    </div>
+    <!-- Additional Container 2 -->
+    <div class="new-container">
+      <i class="fas fa-envelope email-icon"></i> <!-- Email icon -->
+      <h3>Email</h3>
+      <p>@akanksha.wagaskar22@vit.edu</p>
+      <p>@tejas.wasekar22@vit.edu</p>
+    <p>@shubham.tambe22@vit.edu</p>
+    <p>@aniket.thenge22@vit.edu</p>
+
+    </div>
+    <!-- Additional Container 3 -->
+   <!-- Additional Container 3 -->
+<div class="new-container">
+  <i class="fas fa-phone phone-icon"></i> <!-- Phone icon -->
+  <h3>Phone Number</h3>
+  <p>7666815705</p>
+</div>
+
+    <!-- Additional Container 4 -->
+    <div class="new-container">
+      <i class="fas fa-user-circle author-icon"></i> <!-- Author icon -->
+      <h3> Team</h3>
+      <p>Akanksha Wagaskar</p>
+      <p>Tejas Wasekar</p>
+      <p>Shubham Tambe</p>
+      <p>Aniket Thenge</p>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h6>OUR TEAM</h6>
+<h5>Our team is here to support you every step of the way on your agrotourism journey. From selecting the perfect farms to visit to curating hands-on experiences that connect you with nature, we're dedicated to making your agricultural adventures memorable. Let us be your companions in discovering the richness of rural life and guiding you to unforgettable farm experiences.</h5>
+<div class="additional-containers">
+  <!-- First Additional Container -->
+  <div class="additional-container">
+      <div class="circle-container">
+          <img src="akanksha photo.jpg" alt="Image 1">
+      </div>
+      <h2>Akanksha Wagaskar</h2>
+      <p>SY-IT<br>
+      </p>
+      
+  </div>
+
+  <!-- Second Additional Container -->
+  <div class="additional-container">
+      <div class="circle-container">
+          <img src="" alt="Image 2">
+      </div>
+      <h2>Tejas Wasekar</h2>
+      <p>SY-IT</p>
+  </div>
+
+  <!-- Third Additional Container -->
+  <div class="additional-container">
+      <div class="circle-container">
+          <img src="" alt="Image 3">
+      </div>
+      <h2>Shubham Tambe</h2>
+      <p>SY-IT</p>
+  </div>
+</div>
+
+
+<div class="new-additional-containers">
+  <!-- Fourth Additional Container -->
+  <div class="new-additional-container">
+      <div class="circle-container">
+          <img src="" alt="Image 4">
+      </div>
+      <h2>Rohit Sutrave</h2>
+      <p>SY-IT</p>
+  </div>
+
+  <!-- Fifth Additional Container -->
+  <div class="new-additional-container">
+      <div class="circle-container">
+          <img src="" alt="Image 5">
+      </div>
+      <h2>Aniket Thenge</h2>
+      <p>SY-IT</p>
+  </div>
+</div>
+
+<!-- Rest of your HTML content -->
+
+
+<!-- Rest of your HTML content -->
+
+	
+<footer>
+    <div class="foot-panel">
+
+    </div>
+    <div class="foot-panel2">
+        <ul>
+            <h5>Accommodations</h5>
+<a>
+Farm Stays<br>
+Eco Resorts<br>
+Rustic Hostels<br>
+Agri Rentals<br>
+Farm Campsites<br>
+Farm B&Bs<br>
+Local Flights<br>
+Rural Airlines<br>
+Nearby Airports<br>
+Flight Status<br>
+Baggage Info<br>
+Agro Flyer Programs
+</a>
+
+
+        </ul>
+        <ul>
+            <h5>Travel Guides</h5>
+            <a>
+                Agro Tips<a>
+                Packing Essentials<br>
+                Visa Info<br>
+                Travel Insurance<br>
+                Local Customs<br>
+                Cultural Insights<br>
+                Farm Tours<br>
+                Outdoor Activities<br>
+                Local Cuisine<br>
+                Market Guide<br>
+                Artisan Shopping<br>
+                Night Farm Visits
+            </a>
+        </ul>
+        <ul>
+            <h5>Travel Guides</h5>
+            <a>
+                Agro Tips<br>
+                Packing Essentials<br>
+                Visa Info<br>
+                Travel Insurance<br>
+                Local Customs<br>
+                Cultural Insights<br>
+                Farm Tours<br>
+                Outdoor Activities<br>
+                Local Cuisine<br>
+                Market Guide<br>
+                Artisan Shopping<br>
+                Night Farm Visits
+            </a>
+            
+        </ul>
+        <ul>
+            <h5>Social Media</h5>
+            <a>
+                Facebook<br>
+                Twitter<br>
+                Instagram<br>
+                Pinterest<br>
+                YouTube<br>
+                Blog Subscription<br>
+                Travel Alerts<br>
+                Health Tips<br>
+                Safety Guidelines<br>
+                Emergency Contacts<br>
+                Insurance Info
+            </a>
+            
+
+        </ul>
+    </div>
+
+
+</footer>
+
+<div class="separate-container">
+   
+
+    <!-- Phone number and address -->
+    <div class="contact-info">
+        <p><i class="fas fa-map-marker-alt"></i> Address: VIT Pune, IT Department, TY-C-Group No.11, Pune, India</p>
+    </div>
+    <!-- End of phone number and address -->
+</div>
+
+
+</body>
+
+</html>
+</body>
+</html>
